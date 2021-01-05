@@ -192,3 +192,69 @@ so that it will be removed if the todo.textContent does not contain the searched
 .filtered-todo {
     display: none;
 }
+
+/* making it responsive */
+@media only screen and (max-width: 450px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .heading > h1 {
+        font-size: 2.5rem;
+        font-weight: 900;
+        text-align: center;
+    }
+    .inputs {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 90%;
+
+    }
+    .taskAdder {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .task-input {
+        width: 100%;
+        font-size: 1rem;
+    }
+    .task-adding-button {
+        width: 10vw;
+    }
+    .task-adding-button > img {
+        width: 10vw;
+    }
+    .category {
+        width: 100%;
+        height: 7.4vh;
+    }
+    #category {
+        width: 100%;
+    }
+    .category::after {
+        background: #ec8a35;
+        font-size: 2rem;
+        padding-right: 10px;
+    } 
+    .search-box > input {
+        width: 100%;
+        padding-left: 7px;
+        font-size: 1rem;
+    }
+    .tasks {
+        width: 90vw;
+    }
+    .task-tiles {
+        width: 90vw;
+        justify-content: space-between;
+    }
+    .task-tiles > span {
+        font-size: 1rem;
+    }
+    .check-button {
+        margin-left: 26%;
+    }
+}
