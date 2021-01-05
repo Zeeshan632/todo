@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Zee's todo</title>
+</head>
+<body>
+    <section class="todo-section">
+        <div class="heading">
+            <h1>Zee's todo</h1>
+        </div>
+        <div class="inputs">
+            <form class="taskAdder">
+                <input type="text" class="task-input" placeholder="type a todo here">
+                <button type="submit" class="task-adding-button"><img src="images/plus.svg" alt=""></button>
+            </form>
+            <div class="category">
+                <select id="category">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="incompleted">Incompleted</option>
+                </select>
+            </div>
+            <form class="search-box">
+                <input type="search" placeholder="search for a task">
+            </form>
+        </div>
+        <div class="tasks"></div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>

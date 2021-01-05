@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.todo-section {
+    background-image: url(images/umbrellas.jpg);
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading {
+    width: 50vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heading > h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: white;
+    text-shadow: 0px 4px 0px #f3a561;
+}
+.inputs {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 4fr 1fr;
+    width: 55vw;
+}
+.taskAdder {
+    background: white;
+    border-radius: 10px;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+}
+.category {
+    background: white;
+    width: 9rem;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+#category {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    padding-left: 10px;
+    outline: none;
+    width: 9rem;
+    height: 100%;
+    color: #ec8a35;
+    cursor: pointer;
+}
+.category::after {
+    content: "\21E9";
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    background: #ec8a35;
+    font-size: 2rem;
+    padding: 6px 10px 10px 10px;
+    pointer-events: none;
+} 
+#category > option{
+    border: none;
+    font-size: 1.1rem;
+}
+.search-box {
+    background: green;
+    width: 100%;
+    height: 7vh;
+    grid-column: 1/4;
+    align-self: center;
+    justify-self: center;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-box > input {
+    width: 55vw;
+}
+.tasks {
+    margin-top: 70px;
+}
+.task-tiles {
+    background: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 55vw;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.task-tiles > span {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 47vw;
+    padding-left: 10px;
+    font-size: 1.5rem;
+    background: white;
+    pointer-events: none;
+    /* pointer-events: ; */
+}
+
+.task-tiles > .check-button {
+    background: green;
+    padding: 9px;
+    height: 7vh;
+    cursor: pointer;
+    margin-top: -1px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.task-tiles > .delete-button {
+    padding: 9px;
+    height: 7vh;
+    background: #ec8a35;
+    cursor: pointer;
+    margin-top: -1px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.check-button > img,
+.delete-button > img{
+    width: 4vw;
+    height: 4vh;
+    pointer-events: none;
+}
+.checking-task {
+    text-decoration: line-through;
+    opacity: 50%;
+}
+.deleting-task {
+    animation: deleting-animation 1s ease-out forwards;
+}
+@keyframes deleting-animation {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+}
+
+
+
+
+/* elements having general styles */
+input {
+    width: 37vw;
+    height: 5vh;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1.5rem;
+}
+button {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+button:hover {
+    transform: scaleX(30px);
+}
+button > img {
+    width: 5vw;
+    height: 5vh;
+    cursor: pointer;
+}
+
+/* giving the class filtered-todo the property of display none,
+so that it will be removed if the todo.textContent does not contain the searched term */
+
+.filtered-todo {
+    display: none;
+}
